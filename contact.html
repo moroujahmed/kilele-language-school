@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register interest | Kilele Language School</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 680px; margin: 3rem auto; padding: 0 1rem; color: #172033; }
+    label { display: block; margin: 1rem 0; }
+    input, select, button { display: block; width: 100%; max-width: 440px; padding: .7rem; margin-top: .35rem; }
+    button { background: #123b63; color: white; border: 0; border-radius: 6px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Register your interest</h1>
+    <p><strong>Demonstration only:</strong> this static form does not send or store personal information. Connect a secure, approved form service before collecting real student data.</p>
+    <form id="interest-form">
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Preferred language
+        <select name="language"><option>English</option><option>French</option><option>Portuguese</option></select>
+      </label>
+      <button type="submit">Submit interest</button>
+    </form>
+    <p><a href="./">Back to home</a></p>
+  </main>
+  <script>
+    document.getElementById('interest-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Demo only: no information has been sent or stored.');
+    });
+  </script>
+</body>
+</html>
